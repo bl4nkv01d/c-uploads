@@ -1,3 +1,11 @@
+
+/*
+    this is a basic 
+    calculator which can 
+    add subtract multiple 
+    and divide two numbers
+*/
+
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -10,7 +18,6 @@ int main()
     char again = 'R';
     
     while(again == 'r' || again == 'R'){
-
     //calculator app
     int num1, num2;
     char opr;
