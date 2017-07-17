@@ -1,11 +1,15 @@
-#include <iostream>
 
+/*
+    basic volume finder
+    code for c++
+*/
+
+#include <iostream>
 using namespace std;
 
 int volume(int l=1, int w=1, int h=1);
 
-int main()
-{
+int main() {
     cout << "enter l,w,h" << endl;
     int Luser, Wuser, Huser;
     cin >> Luser;
