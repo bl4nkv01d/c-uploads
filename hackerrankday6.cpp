@@ -1,3 +1,8 @@
+/* 
+    Day 6 c++ code 
+    on hackerrank:
+    30 days of code
+*/
 
 #include <cmath>
 #include <cstdio>
