@@ -1,2 +1,4 @@
 # c-uploads
-this is just a repository to store some c++ creations
+This repository is for 
+storing my c++ creations 
+in which you can view...
