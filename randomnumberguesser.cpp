@@ -1,3 +1,10 @@
+/*
+    this is a random number 
+    generate { produces a rand single
+    digit number then you have to guess
+    it } 
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -7,7 +14,6 @@ using namespace std;
 int main()
 {
     srand(time(0));
-    //cout << 1 + (rand()%6) << endl;
 
     cout << "keep entering numbers until you guess ";
     cout << "correctly " << endl;
