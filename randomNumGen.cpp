@@ -36,7 +36,6 @@ int main(){
     
     int randNumber = randNumbGenerated;
     if(userNum < 10 || userNum >= 0){
-        cout << "userNum passes testcase" << endl;
         string repeatGuess = "ye";
         while(repeatGuess == "ye"){
         if(userNum != randNumber){
