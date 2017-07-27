@@ -1,3 +1,6 @@
+/*
+random number generator between 1 and 10
+*/
 #include <iostream>
 #include <string>
 #include <cmath>
