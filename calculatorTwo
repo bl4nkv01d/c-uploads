@@ -1,0 +1,141 @@
+/*
+  this is a calculator similar
+  to my previous one however it uses
+  class functions but it doesn't
+  repeat the code after you're finished
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+class calculateNum
+{
+    
+private:
+    double numOne;
+    double numTwo;
+    
+    int selectOpr;
+    
+    string confirmNumOne = "ye";
+    string confirmNumTwo = "ye";
+    string confirmOpr = "ye";
+    
+public:
+    
+    void getNumOne()
+    {
+        cout << "welcome to an online calculator" << endl;
+        cout << "please enter your first number on the next lines." << endl;
+        cout << "enter your first number here: ";
+
+        while(confirmNumOne == "ye")
+        {
+            if(cin >> numOne)
+            {
+                cout << "your number has been accepted as : " << numOne << endl;
+                confirmNumOne = "ne";
+            }
+            else
+            {
+                cout << "your number is invalid, please try again. \nFirst Number: ";
+                cin.clear();
+                cin.ignore();
+                cout << endl;
+            }
+        }
+    }
+    
+    void getNumTwo()
+    {
+        cout << "\nnow enter your second number here : ";
+        while(confirmNumTwo == "ye")
+        {
+         if(cin >> numTwo)
+          {
+             cout << "your number has been accepted as : " << numTwo << endl;
+             confirmNumTwo = "ne";
+          }
+         else
+          {
+             cout << "your number is invalid, please try again. \nSecond Number: ";
+             cin.clear(); cin.ignore();
+             cout << endl;
+          }
+        }
+    }
+    
+    void getOperator()
+    {
+        cout << "now enter the operator you want to enter" << endl;
+        cout << "(please only enter 1,2,3,4)" << endl;
+        cout << "1. Add" << endl;
+        cout << "2. Subtract" << endl;
+        cout << "3. Multiply" << endl;
+        cout << "4. Divide" << endl;
+        while(confirmOpr == "ye")
+        {
+            
+            if(cin >> selectOpr)
+            {
+                if(selectOpr == 1)
+                {
+                    cout << "adding " << numOne << " and " << numTwo << endl;
+                    confirmOpr = "ne";
+                }else if(selectOpr == 2)
+                {
+                    cout << "subtracting " << numOne << " and " << numTwo << endl;
+                    confirmOpr = "ne";
+                }else if(selectOpr == 3)
+                {
+                    cout << "multiplying " << numOne << " and " << numTwo << endl;
+                    confirmOpr = "ne";
+                } else if(selectOpr == 4)
+                {
+                    cout << "dividing " << numOne << " and " << numTwo << endl;
+                    confirmOpr = "ne";
+                } else
+                {
+                    cout << "invalid number entered (please only type 1,2,3,or 4)" << endl;
+                    cin.clear();
+                    cin.ignore();
+                    cout << endl;
+                }
+            }
+            
+        }
+    }
+    
+    void numResult()
+    {
+        if(selectOpr == 1)
+        {
+            cout << "your result is : " << numOne + numTwo << endl;
+        }else if (selectOpr == 2)
+        {
+            cout << "your result is : " << numOne - numTwo << endl;
+        }else if(selectOpr == 3)
+        {
+            cout << "your result is : " << numOne * numTwo << endl;
+        }else if(selectOpr == 4)
+        {
+            cout << "your result is : " << numOne / numTwo << endl;
+        }
+    }
+    
+};
+
+
+int main()
+{
+    calculateNum calNumObj;
+    calNumObj.getNumOne();
+    calNumObj.getNumTwo();
+    calNumObj.getOperator();
+    calNumObj.numResult();
+    
+    return 0;
+}
