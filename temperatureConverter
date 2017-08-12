@@ -1,0 +1,75 @@
+/*
+  while there are many different ways 
+  this is the code I used to make my
+  temperature converter in C++ (obviously)
+*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class convert
+{
+private:
+    double numFromFahr;
+    double numFromCel;
+    string confirmNum = "ye";
+    double getTempType;
+    
+public:
+    
+    void convertNums()
+    {
+        cout << "welcome to a temperature converter, ";
+        cout << "please enter whether you want to convert ";
+        cout << "from fahrenheit to celsuis or celsuis to fahrenheit. (1 or 2)" << endl;
+        cout << "(1). Convert From Fahrenheit. " << endl;
+        cout << "(2). Convert from Celsuis. " << endl;
+     while(confirmNum == "ye")
+      {
+        if(cin >> getTempType)
+        {
+         
+            if(getTempType == 1)
+            {
+                cout << "please enter the temperature in fahrenheit : ";
+                if(cin >> numFromFahr)
+                {
+                    cout << numFromFahr << " degrees fahrenheit is ";
+                    cout << (numFromFahr - 32) * 5 / 9;
+                    cout << " in celsuis" << endl;
+                    confirmNum = "ne";
+                }
+            }else if(getTempType == 2)
+            {
+                cout << "please enter the temperature in celsuis : ";
+                if(cin >> numFromCel)
+                {
+                    cout << numFromCel << " degrees in celsuis is ";
+                    cout << numFromCel * 9 / 5 + 32 << " in fahrenheit." << endl;
+                    confirmNum = "ne";
+                }
+            }else
+            {
+                cout << "you've entered an invalid number (only type 1 or 2)" << endl;
+                cout << "enter your number here : ";
+                cin.clear();
+                cin.ignore();
+            }
+            
+        }
+      }
+        
+    }
+    
+    
+};
+
+int main()
+
+{
+    convert conOBJ;
+    conOBJ.convertNums();
+}
+
+
