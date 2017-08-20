@@ -1,10 +1,7 @@
-//
-//  main.cpp
-//  DataLimit
-//
-//  Created by Timothy Zigan on 8/19/17.
-//  Copyright © 2017 Bl4nkv01d. All rights reserved.
-//
+/*
+    Find the amount of data you
+    can use per day (phone data)
+*/
 
 #include <iostream>
 #include <string>
@@ -15,9 +12,6 @@ using namespace std;
 
 int main()
 {
-
-    //time_t t = time(0);   // get time now
-    //struct tm * now = localtime( & t );
     
     cout << "Enter the Month Name In a Number: " << endl;
     cout << "(1).  January" << endl;
@@ -125,12 +119,4 @@ int main()
     int sum = dataLimit * 1000 / daysInMonth;
         cout << sum << "mb's" << endl;
     
-    
-    
-    /*
-    cout << (now->tm_year + 1900) << '-'
-    << (now->tm_mon + 1) << '-'
-    <<  now->tm_mday
-    << endl;
-    */
 }
